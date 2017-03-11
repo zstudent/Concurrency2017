@@ -1,0 +1,15 @@
+
+
+Заал Льянов
+
+EPAM Systems
+
+1992 МГУ  ВМиК  Алгоритмические языки
+
+Life Sciences BU
+
+
+Java Concurrency in Practice  
+
+
+github.com/zstudent/Concurrency2017
