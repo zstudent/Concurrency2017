@@ -1,4 +1,4 @@
-
+zaal_lyanov@epam.com
 
 Заал Льянов
 
@@ -13,3 +13,46 @@ Java Concurrency in Practice
 
 
 github.com/zstudent/Concurrency2017
+
+Race Condition
+
+
+T1           0         T2
+            count++
+            count = count + 1
+            LOAD count
+            INC
+            STORE count
+            
+ 0   LOAD     0
+              0   LOAD  0
+ 1    INC     0
+              0   INC    1
+ 1   STORE    1
+              1    STORE  1
+             
+0   LOAD      0
+1   INC
+1  STORE      1             
+
+			  1   LOAD  1
+			       INC  2
+			  2    STORE 2	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
