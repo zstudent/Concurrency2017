@@ -41,11 +41,26 @@ T1           0         T2
 
 
 
+check-and-act
+
+read-modify-write
+
+lock ->  monitor  <->  Object
 
 
+         Thread 1             Object           Thread2         Thread 3
+                            [  [ ]  ] 
+   synchronized change {        X              
+                                               synchronized change
+    for 0..9                                        blocked    sync change blocked
 
+    }                           X      --->>  
+                                X               for 0..9          
+                                X                                for 0..9
 
+Liveness
 
+Reentrant   re-enter
 
 
 

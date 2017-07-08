@@ -16,11 +16,11 @@ public class RaceCondition {
 			}
 		}
 
-		private void inc() {
-			synchronized (this) {
+		synchronized private void inc() {
+//			synchronized (this) {
 				count++;
 				System.out.println(count);
-			}
+//			}
 		}
 		
 		private void inc2() {
