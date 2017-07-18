@@ -63,8 +63,17 @@ Liveness
 Reentrant   re-enter
 
 
+                                   volatile    synchronized       Lock      Semaphore  Atomic
+solves race condition problem         -              V              V           ?        ?
+visibility                            V              V              V            ?      ?
+can be interrupted                    -              -              V          ?         ?
+lock with timeout                     -              -              V          ?       ?
+lock/unlock in separate code blocks   -              -              V         ?        ?
+lock/unlock in different threads      -              -              -        V        ?
+multiple conditions                   -              -              V       -         - 
+fair                                 -               -              V
 
-
+RTFM
 
 
 
